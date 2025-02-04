@@ -1,343 +1,266 @@
 
+# RC Robot with Teleop Web GUI & Integrated ROS2 Nodes
 
-- create project sturcture as shown in the repo 
+In this project we are converting rgular RC Car to autonomus vehicle. 
+The project provides a solution for controlling a ROS2-based robot, an autonomous RC car from a web interface on a smartphone. It includes:
+- A **responsive web GUI** (built with HTML/CSS/JavaScript) that sends live control commands (Twist messages) to the robot.
+- ROS2 nodes for:
+  - **Motor Control:** Receives `/cmd_vel` commands and controls drive/steering motors via a motor driver.
+  - **IMU:** Reads data from an MPU6050 sensor over I²C and publishes IMU data.
+  - **Lidar:** Integrates a RPLIDAR (or compatible) sensor and publishes LaserScan messages.
 
+--- 
 
-```
-autonomus_ROS/
-├── src
-│   └── config
-│       └── empty_config.yaml
-│   └── description
-│       └── robot.urdf.xacro
-│   └── include
-│   └── launch
-│       └── rsp.launch.py
-│   └── worldsc
-│       └── empty.world
-│   └── ...
-
-```
-- install ros2 full packages and extra packages as shown below: 
-```
-sudo apt install ros-jazzy-xacro 
-sudo apt install ros-jazzy-joint-state-publisher-gui
-```
- 
-- build colcon project
-```
-cd ~/autonomus_ROS
-colcon build --symlink-install
-
-```
-
-- activate new ros project env 
-
-```
-source install/setup.bash
-```
-- visualize robot 
-```
-ros2 launch my_bot rsp.launch.py
-```
-
-- add base link and some details on robot desctiption 
-```
---rerun lauch file 
---run rviz2 on another terminal 
---Set the fixed frame to base_link on rviz2 
---Add a TF display (and enable showing names)
---Add a RobotModel display (setting the topic to /robot_description)
-```
-
-- run wheel joints runner 
-
-```
-ros2 runjoint_state_publisher_gui joint_state_publisher_gui
-```
-
-- gazebo launch 
-
-```
-ros2 launch gazebo_ros gazebo.launch.py
-```
-
-if gazebo has not alreay been installed 
-```
-sudo apt install ros-jazzy-gazebo-ros-pkgs
-```
-for the rest of guide refer to : https://articulatedrobotics.xyz/tutorials/mobile-robot/concept-design/concept-gazebo
-
-- gazebo hormonic launch 
-
-```
-sudo apt install ros-jazzy-ros2-control
-sudo apt install ros-jazzy-ros2-controllers
-sudo apt install ros-jazzy-ros-gz
-sudo apt install ros-jazzy-gz-ros2-control
-sudo apt install ros-jazzy-joy*
-sudo apt install ros-jazzy-joint-state-publisher
+## TO DO
+- 💭 **SLAM** to careate enviorenment map and localize the car
+- 💭 **Navigation** to autonomously drive and find a best path to reach the target point 
+- 💭 **Path Planning AI** train RL agnet to navigate on usneen enviorenments without a map
+- 💭 **Object Detection** for better localization and navigation
+- ✅ **Remote Motor Control** web based gui to control car
 
 
+---
 
-ros2 launch gazebo_ros gazebo.launch.py
-```
-for the rest of gazebo hormonic, reger to https://www.youtube.com/watch?v=b8VwSsbZYn0
+## Table of Contents
 
+- [Features](#features)
+- [Prerequisites](#)
+- [Project Setup and Node Creation](#project-setup-and-node-creation)
+  - [ROS2 Workspace Setup](#ros2-workspace-setup)
+  - [Motor Control Node](#motor-control-node)
+  - [IMU Node](#imu-node)
+  - [Lidar Node](#lidar-node)
+- [Web GUI Setup](#web-gui-setup)
+- [Usage](#usage)
+- [To Do List](#to-do-list)
+- [Troubleshooting](#troubleshooting)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
 
+---
 
+## Features
 
+- **Responsive Web GUI:** Optimized for mobile devices.
+- **Real-Time Control:** Commands are sent immediately upon interaction.
+- **ROS2 Integration:** Nodes for motor control, IMU data, and lidar scanning.
+- **Local Communication:** Uses a locally built copy of roslibjs and rosbridge for WebSocket-based communication.
+- **Extensible:** Easily integrate additional sensors or controls (e.g., virtual joystick).
 
+---
 
+## Prerequisites
 
+- **ROS2 Installation:** (e.g., ROS2 Humble on Ubuntu 22.04)
 
+The web GUI communicates with ROS using [roslibjs](https://github.com/RobotWebTools/roslibjs) via a locally hosted copy and [rosbridge_suite](https://github.com/RobotWebTools/rosbridge_suite).
 
+- **rosbridge_suite:**  
+  Install and run the rosbridge server on your ROS machine:
+  ```bash
+  sudo apt install ros-humble-rosbridge-server
+  ros2 run rosbridge_server rosbridge_websocket
+  ```
+- **Network Connectivity:**  
+  Ensure your smartphone and ROS machine are on the same network.
+- **Hardware Setup:**
+  - **Motor Control:** Wiring for drive and steering motors via an L9110 motor driver.
+  - **IMU:** MPU6050 sensor connected via I²C.
+  - **Lidar:** RPLIDAR or SLAMTEC Lidar connected via USB (or appropriate interface).
+- **Local HTTP Server:**  
+  To serve the web interface (e.g., Python’s HTTP server).
 
-```
+---
 
+## Project Setup and Node Creation
 
+### ROS2 Workspace Setup
 
+1. **Create a ROS2 Workspace (if you haven't already):**
+   ```bash
+   mkdir -p ~/ros2_ws/src
+   cd ~/ros2_ws/src
+   ```
+   
+2. **Clone or Create Your ROS2 Packages:**
 
-
-
-
-
-```
-
-
-
-Implementing an autonomous driving system with ROS (Robot Operating System) on the NVIDIA Jetson Nano involves several steps, including setting up the hardware, installing the necessary software, and developing and integrating various components such as perception, planning, and control. Here’s a comprehensive guide to help you get started:
-
-### 1. Setting Up the Jetson Nano
-
-#### Hardware Requirements:
-- NVIDIA Jetson Nano Developer Kit
-- MicroSD card (32GB or larger)
-- Power supply (5V 4A recommended)
-- Camera (preferably a stereo camera or depth camera)
-- Sensors (e.g., LiDAR, ultrasonic sensors, IMU)
-- Motor controller and actuators (for steering and throttle)
-- Monitor, keyboard, and mouse
-
-#### Software Requirements:
-- JetPack SDK
-- ROS Melodic or ROS Noetic
-- Python libraries: OpenCV, NumPy, etc.
-- Deep learning frameworks: TensorFlow or PyTorch
-
-### 2. Initial Setup
-
-1. **Flash the MicroSD Card:**
-   - Download and flash the JetPack image onto the MicroSD card.
-
-2. **Boot the Jetson Nano:**
-   - Insert the MicroSD card, connect peripherals, and power on the Jetson Nano.
-
-3. **Install ROS:**
-   - Follow the ROS installation guide for Jetson Nano:
-     ```sh
-     # Set up your sources.list
-     sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-
-     # Set up your keys
-     sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
-
-     # Update package index
-     sudo apt-get update
-
-     # Install ROS
-     sudo apt-get install ros-melodic-desktop-full
-
-     # Initialize rosdep
-     sudo rosdep init
-     rosdep update
-
-     # Environment setup
-     echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
-     source ~/.bashrc
-
-     # Dependencies for building packages
-     sudo apt install python-rosinstall python-rosinstall-generator python-wstool build-essential
+   - **Motor Control Node:**  
+     Create a Python package for motor control.
+     ```bash
+     ros2 pkg create --build-type ament_python motor_control --dependencies rclpy geometry_msgs
+     ```
+     
+   - **IMU Node:**  
+     Create a Python package for the MPU6050-based IMU.
+     ```bash
+     ros2 pkg create --build-type ament_python mpu6050_imu --dependencies rclpy sensor_msgs
+     ```
+     
+   - **Lidar Node:**  
+     You can either use an existing package (such as [sllidar_ros2](https://github.com/Slamtec/sllidar_ros2) or [rplidar_ros](https://github.com/roboception/rplidar_ros)) or create your own. For this project, ```we use ros-humble-rplidar-ros```
+      here other example:
+     ```bash
+     cd ~/ros2_ws/src
+     git clone https://github.com/Slamtec/sllidar_ros2.git
      ```
 
-4. **Install Required Libraries:**
-   - Update the system and install essential libraries:
-     ```sh
-     sudo apt-get update
-     sudo apt-get upgrade
-     sudo apt-get install python3-opencv python3-numpy
-     pip3 install tensorflow
+3. **Implement the Nodes:**
+
+   ### Motor Control Node
+   - **File:** `~/ros2_ws/src/motor_control/motor_control/motor_controller.py`
+   - **Overview:**  
+     This node subscribes to the `/cmd_vel` topic and controls the drive (back) and steering (front) motors via GPIO using PWM.
+   - **GPIO PIN CONNCETION**
+  
+     BACK_MOTOR_PIN1 = 17
+     BACK_MOTOR_PIN2 = 18
+     FRONT_MOTOR_PIN1 = 27
+     FRONT_MOTOR_PIN2 = 22
+
+    
+     ```
+   - **Build the Package:**
+     ```bash
+     cd ~/ros2_ws
+     colcon build --packages-select motor_control
+     source install/setup.bash
      ```
 
-### 3. Developing the Autonomous Driving System
+   ### IMU Node
+   - **File:** `~/ros2_ws/src/mpu6050_imu/mpu6050_imu/mpu6050_node.py`
+   - **Overview:**  
+     This node reads data from an MPU6050 sensor over I²C and publishes `sensor_msgs/Imu` messages.
+   - **GPIO PIN CONNCETION**
 
-#### Step 1: Perception (Object Detection, Lane Detection)
+     MPU6050_ADDR = 0x68
+     PWR_MGMT_1   = 0x6B
+     ACCEL_XOUT_H = 0x3B
+     GYRO_XOUT_H  = 0x43
 
-1. **Object Detection:**
-   - Use a pretrained deep learning model for object detection (e.g., SSD, YOLO):
-     ```python
-     import tensorflow as tf
-     import numpy as np
-     import cv2
-
-     model = tf.saved_model.load("ssd_mobilenet_v2_fpnlite_320x320/saved_model")
-     detection_fn = model.signatures['serving_default']
-
-     def detect_objects(image):
-         input_tensor = tf.convert_to_tensor(image)
-         input_tensor = input_tensor[tf.newaxis, ...]
-         detections = detection_fn(input_tensor)
-         return detections
-
-     cap = cv2.VideoCapture(0)
-     while True:
-         ret, frame = cap.read()
-         if not ret:
-             break
-         image_np = np.array(frame)
-         detections = detect_objects(image_np)
-         for i in range(int(detections['num_detections'])):
-             score = detections['detection_scores'][i].numpy()
-             if score > 0.5:
-                 bbox = detections['detection_boxes'][i].numpy()
-                 ymin, xmin, ymax, xmax = bbox
-                 (left, right, top, bottom) = (xmin * width, xmax * width, ymin * height, ymax * height)
-                 cv2.rectangle(frame, (int(left), int(top)), (int(right), int(bottom)), (0, 255, 0), 2)
-         cv2.imshow('Autonomous Driving - Object Detection', frame)
-         if cv2.waitKey(1) & 0xFF == ord('q'):
-             break
-     cap.release()
-     cv2.destroyAllWindows()
+     ```
+   - **Build the Package:**
+     ```bash
+     cd ~/ros2_ws
+     colcon build --packages-select mpu6050_imu
+     source install/setup.bash
      ```
 
-2. **Lane Detection:**
-   ```python
-   def region_of_interest(img, vertices):
-       mask = np.zeros_like(img)
-       cv2.fillPoly(mask, vertices, 255)
-       masked_image = cv2.bitwise_and(img, mask)
-       return masked_image
+   ### Lidar Node
 
-   def draw_lines(img, lines):
-       if lines is not None:
-           for line in lines:
-               for x1, y1, x2, y2 in line:
-                   cv2.line(img, (x1, y1), (x2, y2), (0, 255, 0), 5)
+   - **Installation:**  
+     install ready rplidar packages 
+     ```bash
+      sudo apt install ros-humble-rplidar-ros
 
-   cap = cv2.VideoCapture(0)
-   while True:
-       ret, frame = cap.read()
-       if not ret:
-           break
-       gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-       blur = cv2.GaussianBlur(gray, (5, 5), 0)
-       edges = cv2.Canny(blur, 50, 150)
-       height, width = edges.shape
-       roi_vertices = [(0, height), (width / 2, height / 2), (width, height)]
-       cropped_edges = region_of_interest(edges, np.array([roi_vertices], np.int32))
-       lines = cv2.HoughLinesP(cropped_edges, 1, np.pi / 180, 50, maxLineGap=50)
-       draw_lines(frame, lines)
-       cv2.imshow('Autonomous Driving - Lane Detection', frame)
-       if cv2.waitKey(1) & 0xFF == ord('q'):
-           break
-   cap.release()
-   cv2.destroyAllWindows()
+     ```
+
+   - **Running the Lidar Node:**  
+     Use the provided launch files or run the node directly. For example:
+     ```bash
+     ros2 launch sllidar_ros2 view_sllidar_a1_launch.py
+     ```
+    
+     or on terminal
+    ```
+    ros2 run rplidar_ros rplidar_composition --ros-args \
+    -p serial_port:=/dev/ttyUSB0 \
+    -p serial_baudrate:=115200 \
+    -p frame_id:=lidar_link \
+    -p angle_compensate:=true \
+    -p scan_mode:=Standard
+    ```
+
+---
+
+## Web GUI Setup
+
+1. **Local Copy of ROSLIB:**  
+   Since pre-built files for ROSLIB v2 are no longer provided by default, either:
+   - **Option A:** Download a stable v1 release of `roslib.min.js` from [jsDelivr](https://cdn.jsdelivr.net/npm/roslib/build/roslib.min.js) and save it in your project folder.
+   - **Option B:** Use NPM to install and build ROSLIB locally:
+     ```bash
+     npm init -y
+     npm install roslib
+     ```
+     Then copy the built/minified file (`roslib.min.js`) from `node_modules/roslib/` (or from the build output folder) to your project folder.
+2. **Web GUI Files:**  
+   Your project folder should include:
+   - `index.html` – [the teleop GUI code ](launch/index.html)
+   - `roslib.min.js` – [the locally hosted JavaScript file](launch/roslib.min.js)
+
+
+---
+
+## Usage
+
+1. **Start ROS2 Nodes:**
+
+   - **Motor Control Node:**
+     ```bash
+     ros2 run motor_control motor_controller
+     ```
+   - **IMU Node:**
+     ```bash
+     ros2 run mpu6050_imu mpu6050_node
+     ```
+   - **Lidar Node:**  
+     Either run the provided launch file (for example):
+     ```bash
+     ros2 launch sllidar_ros2 view_sllidar_a1_launch.py
+     ```
+     or run the node directly if applicable.
+
+2. **Start the rosbridge Server:**
+   ```bash
+   ros2 run rosbridge_server rosbridge_websocket
    ```
 
-#### Step 2: Planning (Path Planning)
+3. **Serve the Web GUI:**
+   In the folder containing `index.html` and `roslib.min.js`:
+   ```bash
+   python3 -m http.server 8000
+   ```
 
-1. **Implementing a Simple Path Planner:**
-   - Use A* or Dijkstra’s algorithm for path planning:
-     ```python
-     import heapq
+4. **Access the GUI:**
+   Open your smartphone or computer browser and navigate to:
+   ```
+   http://<YOUR_ROBOT_IP>:8000/index.html
+   ```
+   Replace `<YOUR_ROBOT_IP>` with the IP address of the machine serving the web page.
 
-     def a_star(start, goal, graph):
-         open_list = []
-         heapq.heappush(open_list, (0, start))
-         came_from = {}
-         g_score = {node: float('inf') for node in graph}
-         g_score[start] = 0
-         f_score = {node: float('inf') for node in graph}
-         f_score[start] = heuristic(start, goal)
+5. **Control the Robot:**
+   - Adjust the speed slider for forward/backward motion.
+   - Tap steering buttons to change direction.
+   - Tap the stop button to halt the robot.
+   
+   Verify the commands are received by checking:
+   ```bash
+   ros2 topic echo /cmd_vel
+   ```
 
-         while open_list:
-             _, current = heapq.heappop(open_list)
-             if current == goal:
-                 return reconstruct_path(came_from, current)
-             for neighbor in graph[current]:
-                 tentative_g_score = g_score[current] + graph[current][neighbor]
-                 if tentative_g_score < g_score[neighbor]:
-                     came_from[neighbor] = current
-                     g_score[neighbor] = tentative_g_score
-                     f_score[neighbor] = g_score[neighbor] + heuristic(neighbor, goal)
-                     if neighbor not in [i[1] for i in open_list]:
-                         heapq.heappush(open_list, (f_score[neighbor], neighbor))
-         return []
 
-     def heuristic(a, b):
-         return abs(a[0] - b[0]) + abs(a[1] - b[1])
+## Troubleshooting
 
-     def reconstruct_path(came_from, current):
-         total_path = [current]
-         while current in came_from:
-             current = came_from[current]
-             total_path.append(current)
-         return total_path[::-1]
-     ```
+- **WebSocket Connection Issues:**  
+  If the browser console logs errors (e.g., `ROSLIB is not defined` or connection errors), verify:
+  - `roslib.min.js` is present in your project folder.
+  - The WebSocket URL in your `index.html` is correct.
+- **No Command Response:**  
+  Ensure:
+  - The rosbridge server is running.
+  - The motor control node is correctly wired and receiving `/cmd_vel` commands.
+- **Hardware Issues:**  
+  Verify that the motors, IMU, and lidar are properly connected and powered.
 
-2. **Integrate with ROS:**
-   - Create a ROS node to handle path planning and communication with other components:
-     ```python
-     import rospy
-     from nav_msgs.msg import Path
-     from geometry_msgs.msg import PoseStamped
+---
 
-     def path_planner():
-         rospy.init_node('path_planner', anonymous=True)
-         path_pub = rospy.Publisher('/planned_path', Path, queue_size=10)
-         rate = rospy.Rate(10)
+## License
 
-         while not rospy.is_shutdown():
-             path_msg = Path()
-             path_msg.header.stamp = rospy.Time.now()
-             path_msg.header.frame_id = "map"
-             for pose in planned_path:
-                 pose_msg = PoseStamped()
-                 pose_msg.header.stamp = rospy.Time.now()
-                 pose_msg.header.frame_id = "map"
-                 pose_msg.pose.position.x = pose[0]
-                 pose_msg.pose.position.y = pose[1]
-                 path_msg.poses.append(pose_msg)
-             path_pub.publish(path_msg)
-             rate.sleep()
+This project is released under the [MIT License](LICENSE).
 
-     if __name__ == '__main__':
-         try:
-             planned_path = a_star(start, goal, graph)
-             path_planner()
-         except rospy.ROSInterruptException:
-             pass
-     ```
+---
 
-#### Step 3: Control (Actuating the Vehicle)
+## Acknowledgements
 
-1. **Implementing Control Algorithms:**
-   - Use a PID controller for steering and speed control:
-     ```python
-     class PIDController:
-         def __init__(self, kp, ki, kd):
-             self.kp = kp
-             self.ki = ki
-             self.kd = kd
-             self.previous_error = 0
-             self.integral = 0
-
-         def control(self, setpoint, measured_value):
-             error = setpoint - measured_value
-             self.integral += error
-             derivative = error - self.previous_error
-             output = self.kp * error + self.ki * self.integral + self.kd * derivative
-             self.previous_error = error
-             return output
-
-     pid = PIDController(1.0, 0.1, 
+- [Robot Web Tools](http://robotwebtools.org/) for roslibjs and rosbridge_suite.
+- The ROS community for continuous support and documentation.
