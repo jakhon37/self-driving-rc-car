@@ -79,8 +79,8 @@ The web GUI communicates with ROS using [roslibjs](https://github.com/RobotWebTo
 
 1. **Create a ROS2 Workspace (if you haven't already):**
    ```bash
-   mkdir -p ~/ros2_ws/src
-   cd ~/ros2_ws/src
+   mkdir -p ~/self-driving-rc-car/src
+   cd ~/self-driving-rc-car/src
    ```
    
 2. **Clone or Create Your ROS2 Packages:**
@@ -101,38 +101,37 @@ The web GUI communicates with ROS using [roslibjs](https://github.com/RobotWebTo
      You can either use an existing package (such as [sllidar_ros2](https://github.com/Slamtec/sllidar_ros2) or [rplidar_ros](https://github.com/roboception/rplidar_ros)) or create your own. For this project, ```we use ros-humble-rplidar-ros```
       here other example:
      ```bash
-     cd ~/ros2_ws/src
+     cd ~/self-driving-rc-car/src
      git clone https://github.com/Slamtec/sllidar_ros2.git
      ```
 
 3. **Implement the Nodes:**
 
    ### Motor Control Node
-   - **File:** `~/ros2_ws/src/motor_control/motor_control/motor_controller.py`
+   - **File:** `~/self-driving-rc-car/src/motor_control/motor_control/motor_controller.py`
    - **Overview:**  
      This node subscribes to the `/cmd_vel` topic and controls the drive (back) and steering (front) motors via GPIO using PWM.
    - **GPIO PIN CONNCETION**
-  
+    ```
      BACK_MOTOR_PIN1 = 17
      BACK_MOTOR_PIN2 = 18
      FRONT_MOTOR_PIN1 = 27
      FRONT_MOTOR_PIN2 = 22
 
-    
      ```
    - **Build the Package:**
      ```bash
-     cd ~/ros2_ws
+     cd ~/self-driving-rc-car
      colcon build --packages-select motor_control
      source install/setup.bash
      ```
 
    ### IMU Node
-   - **File:** `~/ros2_ws/src/mpu6050_imu/mpu6050_imu/mpu6050_node.py`
+   - **File:** `~/self-driving-rc-car/src/mpu6050_imu/mpu6050_imu/mpu6050_node.py`
    - **Overview:**  
      This node reads data from an MPU6050 sensor over I²C and publishes `sensor_msgs/Imu` messages.
    - **GPIO PIN CONNCETION**
-
+    ```
      MPU6050_ADDR = 0x68
      PWR_MGMT_1   = 0x6B
      ACCEL_XOUT_H = 0x3B
@@ -141,7 +140,7 @@ The web GUI communicates with ROS using [roslibjs](https://github.com/RobotWebTo
      ```
    - **Build the Package:**
      ```bash
-     cd ~/ros2_ws
+     cd ~/self-driving-rc-car
      colcon build --packages-select mpu6050_imu
      source install/setup.bash
      ```
@@ -195,8 +194,10 @@ The web GUI communicates with ROS using [roslibjs](https://github.com/RobotWebTo
 ## Usage
 
 1. **Start ROS2 Nodes:**
-
-   - **Motor Control Node:**
+     ```bash
+     ros2 launch launch/autonomous_car_launch.py
+     ```
+   <!-- - **Motor Control Node:**
      ```bash
      ros2 run motor_control motor_controller
      ```
@@ -209,7 +210,7 @@ The web GUI communicates with ROS using [roslibjs](https://github.com/RobotWebTo
      ```bash
      ros2 launch sllidar_ros2 view_sllidar_a1_launch.py
      ```
-     or run the node directly if applicable.
+     or run the node directly if applicable. -->
 
 2. **Start the rosbridge Server:**
    ```bash
