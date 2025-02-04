@@ -1,0 +1,2 @@
+Invoking command in '/home/ubuntu/autonomous_ROS/build/mybot37': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/autonomous_ROS/build/mybot37 -- -j4 -l4
+Invoked command in '/home/ubuntu/autonomous_ROS/build/mybot37' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ubuntu/autonomous_ROS/build/mybot37 -- -j4 -l4

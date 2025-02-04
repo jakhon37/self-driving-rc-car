@@ -1,0 +1,87 @@
+[0.000000] (-) TimerEvent: {}
+[0.001816] (-) JobUnselected: {'identifier': 'mpu6050_imu'}
+[0.002511] (-) JobUnselected: {'identifier': 'mybot37'}
+[0.003033] (motor_control) JobQueued: {'identifier': 'motor_control', 'dependencies': OrderedDict()}
+[0.003253] (motor_control) JobStarted: {'identifier': 'motor_control'}
+[0.098913] (-) TimerEvent: {}
+[0.199683] (-) TimerEvent: {}
+[0.300401] (-) TimerEvent: {}
+[0.401203] (-) TimerEvent: {}
+[0.502038] (-) TimerEvent: {}
+[0.602717] (-) TimerEvent: {}
+[0.703475] (-) TimerEvent: {}
+[0.804159] (-) TimerEvent: {}
+[0.904894] (-) TimerEvent: {}
+[1.005644] (-) TimerEvent: {}
+[1.106433] (-) TimerEvent: {}
+[1.207211] (-) TimerEvent: {}
+[1.308261] (-) TimerEvent: {}
+[1.409102] (-) TimerEvent: {}
+[1.509929] (-) TimerEvent: {}
+[1.610728] (-) TimerEvent: {}
+[1.711482] (-) TimerEvent: {}
+[1.812293] (-) TimerEvent: {}
+[1.913110] (-) TimerEvent: {}
+[2.013903] (-) TimerEvent: {}
+[2.114605] (-) TimerEvent: {}
+[2.215357] (-) TimerEvent: {}
+[2.316134] (-) TimerEvent: {}
+[2.416929] (-) TimerEvent: {}
+[2.517700] (-) TimerEvent: {}
+[2.618436] (-) TimerEvent: {}
+[2.719124] (-) TimerEvent: {}
+[2.820056] (-) TimerEvent: {}
+[2.921426] (-) TimerEvent: {}
+[2.945184] (motor_control) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/motor_control', 'build', '--build-base', '/home/ubuntu/autonomous_ROS/build/motor_control/build', 'install', '--record', '/home/ubuntu/autonomous_ROS/build/motor_control/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/ubuntu/autonomous_ROS/src/motor_control', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ubuntu', 'SSH_CLIENT': '192.168.219.102 48240 22', 'LC_TIME': 'C.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/ubuntu/.vscode-server/cli/servers/Stable-cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/server/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/ubuntu/.vscode-server/cli/servers/Stable-cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/ubuntu', 'OLDPWD': '/home/ubuntu', 'TERM_PROGRAM_VERSION': '1.96.4', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-79f8a6a5-b91b-4a73-8a90-839e09ed1e4e.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/ubuntu/.vscode-server/cli/servers/Stable-cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/server/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'C.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/home/ubuntu/.vscode-server/cli/servers/Stable-cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'ROS_DISTRO': 'humble', 'LOGNAME': 'ubuntu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '1', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/ubuntu/.vscode-server/cli/servers/Stable-cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'LC_ADDRESS': 'C.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'C.UTF-8', 'LC_TELEPHONE': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-44ba984aac.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'C.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'C.UTF-8', 'LC_IDENTIFICATION': 'C.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/ubuntu/autonomous_ROS/build/motor_control', 'SSH_CONNECTION': '192.168.219.102 48240 192.168.219.100 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ubuntu/autonomous_ROS/build/motor_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/autonomous_ROS/install/motor_control/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'C.UTF-8', 'LC_PAPER': 'C.UTF-8', 'COLCON': '1'}, 'shell': False}
+[3.021614] (-) TimerEvent: {}
+[3.122336] (-) TimerEvent: {}
+[3.223215] (-) TimerEvent: {}
+[3.324256] (-) TimerEvent: {}
+[3.425124] (-) TimerEvent: {}
+[3.526242] (-) TimerEvent: {}
+[3.626991] (-) TimerEvent: {}
+[3.727679] (-) TimerEvent: {}
+[3.828398] (-) TimerEvent: {}
+[3.929239] (-) TimerEvent: {}
+[4.030003] (-) TimerEvent: {}
+[4.060083] (motor_control) StdoutLine: {'line': b'running egg_info\n'}
+[4.062790] (motor_control) StdoutLine: {'line': b'creating ../../build/motor_control/motor_control.egg-info\n'}
+[4.063562] (motor_control) StdoutLine: {'line': b'writing ../../build/motor_control/motor_control.egg-info/PKG-INFO\n'}
+[4.064763] (motor_control) StdoutLine: {'line': b'writing dependency_links to ../../build/motor_control/motor_control.egg-info/dependency_links.txt\n'}
+[4.065556] (motor_control) StdoutLine: {'line': b'writing entry points to ../../build/motor_control/motor_control.egg-info/entry_points.txt\n'}
+[4.066194] (motor_control) StdoutLine: {'line': b'writing requirements to ../../build/motor_control/motor_control.egg-info/requires.txt\n'}
+[4.066787] (motor_control) StdoutLine: {'line': b'writing top-level names to ../../build/motor_control/motor_control.egg-info/top_level.txt\n'}
+[4.067752] (motor_control) StdoutLine: {'line': b"writing manifest file '../../build/motor_control/motor_control.egg-info/SOURCES.txt'\n"}
+[4.075324] (motor_control) StdoutLine: {'line': b"reading manifest file '../../build/motor_control/motor_control.egg-info/SOURCES.txt'\n"}
+[4.078880] (motor_control) StdoutLine: {'line': b"writing manifest file '../../build/motor_control/motor_control.egg-info/SOURCES.txt'\n"}
+[4.079639] (motor_control) StdoutLine: {'line': b'running build\n'}
+[4.080194] (motor_control) StdoutLine: {'line': b'running build_py\n'}
+[4.081192] (motor_control) StdoutLine: {'line': b'creating /home/ubuntu/autonomous_ROS/build/motor_control/build\n'}
+[4.081800] (motor_control) StdoutLine: {'line': b'creating /home/ubuntu/autonomous_ROS/build/motor_control/build/lib\n'}
+[4.082231] (motor_control) StdoutLine: {'line': b'creating /home/ubuntu/autonomous_ROS/build/motor_control/build/lib/motor_control\n'}
+[4.082764] (motor_control) StdoutLine: {'line': b'copying motor_control/__init__.py -> /home/ubuntu/autonomous_ROS/build/motor_control/build/lib/motor_control\n'}
+[4.083235] (motor_control) StdoutLine: {'line': b'copying motor_control/motor_controller.py -> /home/ubuntu/autonomous_ROS/build/motor_control/build/lib/motor_control\n'}
+[4.083769] (motor_control) StdoutLine: {'line': b'running install\n'}
+[4.084970] (motor_control) StdoutLine: {'line': b'running install_lib\n'}
+[4.088151] (motor_control) StdoutLine: {'line': b'creating /home/ubuntu/autonomous_ROS/install/motor_control/lib/python3.10/site-packages/motor_control\n'}
+[4.088957] (motor_control) StdoutLine: {'line': b'copying /home/ubuntu/autonomous_ROS/build/motor_control/build/lib/motor_control/__init__.py -> /home/ubuntu/autonomous_ROS/install/motor_control/lib/python3.10/site-packages/motor_control\n'}
+[4.089592] (motor_control) StdoutLine: {'line': b'copying /home/ubuntu/autonomous_ROS/build/motor_control/build/lib/motor_control/motor_controller.py -> /home/ubuntu/autonomous_ROS/install/motor_control/lib/python3.10/site-packages/motor_control\n'}
+[4.092387] (motor_control) StdoutLine: {'line': b'byte-compiling /home/ubuntu/autonomous_ROS/install/motor_control/lib/python3.10/site-packages/motor_control/__init__.py to __init__.cpython-310.pyc\n'}
+[4.094266] (motor_control) StdoutLine: {'line': b'byte-compiling /home/ubuntu/autonomous_ROS/install/motor_control/lib/python3.10/site-packages/motor_control/motor_controller.py to motor_controller.cpython-310.pyc\n'}
+[4.098335] (motor_control) StdoutLine: {'line': b'running install_data\n'}
+[4.099438] (motor_control) StdoutLine: {'line': b'creating /home/ubuntu/autonomous_ROS/install/motor_control/share/ament_index\n'}
+[4.100266] (motor_control) StdoutLine: {'line': b'creating /home/ubuntu/autonomous_ROS/install/motor_control/share/ament_index/resource_index\n'}
+[4.100851] (motor_control) StdoutLine: {'line': b'creating /home/ubuntu/autonomous_ROS/install/motor_control/share/ament_index/resource_index/packages\n'}
+[4.101409] (motor_control) StdoutLine: {'line': b'copying resource/motor_control -> /home/ubuntu/autonomous_ROS/install/motor_control/share/ament_index/resource_index/packages\n'}
+[4.101851] (motor_control) StdoutLine: {'line': b'copying package.xml -> /home/ubuntu/autonomous_ROS/install/motor_control/share/motor_control\n'}
+[4.102258] (motor_control) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.109065] (motor_control) StdoutLine: {'line': b'Copying ../../build/motor_control/motor_control.egg-info to /home/ubuntu/autonomous_ROS/install/motor_control/lib/python3.10/site-packages/motor_control-0.0.0-py3.10.egg-info\n'}
+[4.115097] (motor_control) StdoutLine: {'line': b'running install_scripts\n'}
+[4.130213] (-) TimerEvent: {}
+[4.201495] (motor_control) StdoutLine: {'line': b'Installing motor_controller script to /home/ubuntu/autonomous_ROS/install/motor_control/lib/motor_control\n'}
+[4.203111] (motor_control) StdoutLine: {'line': b"writing list of installed files to '/home/ubuntu/autonomous_ROS/build/motor_control/install.log'\n"}
+[4.230576] (-) TimerEvent: {}
+[4.323253] (motor_control) CommandEnded: {'returncode': 0}
+[4.330711] (-) TimerEvent: {}
+[4.376382] (motor_control) JobEnded: {'identifier': 'motor_control', 'rc': 0}
+[4.379713] (-) EventReactorShutdown: {}

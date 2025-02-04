@@ -1,0 +1,26 @@
+[0.020s] Invoking command in '/home/jakhon37/myspace/robotics/autonomous_ROS/build/mybot37': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jakhon37/myspace/robotics/ros2_ws/src/install/my_robot_controller:/home/jakhon37/myspace/robotics/robot_dev_ws/src/install/my_robot_controller:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jakhon37/myspace/robotics/autonomous_ROS/build/mybot37 -- -j4 -l4
+[0.079s] Invoked command in '/home/jakhon37/myspace/robotics/autonomous_ROS/build/mybot37' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jakhon37/myspace/robotics/ros2_ws/src/install/my_robot_controller:/home/jakhon37/myspace/robotics/robot_dev_ws/src/install/my_robot_controller:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jakhon37/myspace/robotics/autonomous_ROS/build/mybot37 -- -j4 -l4
+[0.093s] Invoking command in '/home/jakhon37/myspace/robotics/autonomous_ROS/build/mybot37': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jakhon37/myspace/robotics/ros2_ws/src/install/my_robot_controller:/home/jakhon37/myspace/robotics/robot_dev_ws/src/install/my_robot_controller:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jakhon37/myspace/robotics/autonomous_ROS/build/mybot37
+[0.105s] -- Install configuration: ""
+[0.107s] -- Execute custom install script
+[0.108s] -- Up-to-date symlink: /home/jakhon37/myspace/robotics/autonomous_ROS/install/mybot37/share/mybot37/config/config.yaml
+[0.108s] -- Up-to-date symlink: /home/jakhon37/myspace/robotics/autonomous_ROS/install/mybot37/share/mybot37/description/robot.urdf.xacro
+[0.108s] -- Up-to-date symlink: /home/jakhon37/myspace/robotics/autonomous_ROS/install/mybot37/share/mybot37/description/robot_core.xacro
+[0.109s] -- Up-to-date symlink: /home/jakhon37/myspace/robotics/autonomous_ROS/install/mybot37/share/mybot37/launch/rsp.launch.py
+[0.109s] -- Up-to-date symlink: /home/jakhon37/myspace/robotics/autonomous_ROS/install/mybot37/share/mybot37/worlds/botworld.world
+[0.110s] -- Up-to-date symlink: /home/jakhon37/myspace/robotics/autonomous_ROS/install/mybot37/share/ament_index/resource_index/package_run_dependencies/mybot37
+[0.110s] -- Up-to-date symlink: /home/jakhon37/myspace/robotics/autonomous_ROS/install/mybot37/share/ament_index/resource_index/parent_prefix_path/mybot37
+[0.111s] -- Up-to-date symlink: /home/jakhon37/myspace/robotics/autonomous_ROS/install/mybot37/share/mybot37/environment/ament_prefix_path.sh
+[0.111s] -- Up-to-date symlink: /home/jakhon37/myspace/robotics/autonomous_ROS/install/mybot37/share/mybot37/environment/ament_prefix_path.dsv
+[0.111s] -- Up-to-date symlink: /home/jakhon37/myspace/robotics/autonomous_ROS/install/mybot37/share/mybot37/environment/path.sh
+[0.112s] -- Up-to-date symlink: /home/jakhon37/myspace/robotics/autonomous_ROS/install/mybot37/share/mybot37/environment/path.dsv
+[0.112s] -- Up-to-date symlink: /home/jakhon37/myspace/robotics/autonomous_ROS/install/mybot37/share/mybot37/local_setup.bash
+[0.112s] -- Up-to-date symlink: /home/jakhon37/myspace/robotics/autonomous_ROS/install/mybot37/share/mybot37/local_setup.sh
+[0.113s] -- Up-to-date symlink: /home/jakhon37/myspace/robotics/autonomous_ROS/install/mybot37/share/mybot37/local_setup.zsh
+[0.113s] -- Up-to-date symlink: /home/jakhon37/myspace/robotics/autonomous_ROS/install/mybot37/share/mybot37/local_setup.dsv
+[0.113s] -- Symlinking: /home/jakhon37/myspace/robotics/autonomous_ROS/install/mybot37/share/mybot37/package.dsv
+[0.126s] -- Up-to-date symlink: /home/jakhon37/myspace/robotics/autonomous_ROS/install/mybot37/share/ament_index/resource_index/packages/mybot37
+[0.126s] -- Up-to-date symlink: /home/jakhon37/myspace/robotics/autonomous_ROS/install/mybot37/share/mybot37/cmake/mybot37Config.cmake
+[0.126s] -- Up-to-date symlink: /home/jakhon37/myspace/robotics/autonomous_ROS/install/mybot37/share/mybot37/cmake/mybot37Config-version.cmake
+[0.127s] -- Up-to-date symlink: /home/jakhon37/myspace/robotics/autonomous_ROS/install/mybot37/share/mybot37/package.xml
+[0.130s] Invoked command in '/home/jakhon37/myspace/robotics/autonomous_ROS/build/mybot37' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jakhon37/myspace/robotics/ros2_ws/src/install/my_robot_controller:/home/jakhon37/myspace/robotics/robot_dev_ws/src/install/my_robot_controller:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jakhon37/myspace/robotics/autonomous_ROS/build/mybot37

@@ -1,0 +1,71 @@
+[0.000000] (-) TimerEvent: {}
+[0.001993] (motor_control) JobQueued: {'identifier': 'motor_control', 'dependencies': OrderedDict()}
+[0.002558] (mpu6050_imu) JobQueued: {'identifier': 'mpu6050_imu', 'dependencies': OrderedDict()}
+[0.002781] (mybot37) JobQueued: {'identifier': 'mybot37', 'dependencies': OrderedDict()}
+[0.003098] (motor_control) JobStarted: {'identifier': 'motor_control'}
+[0.060638] (mpu6050_imu) JobStarted: {'identifier': 'mpu6050_imu'}
+[0.085870] (mybot37) JobStarted: {'identifier': 'mybot37'}
+[0.098591] (-) TimerEvent: {}
+[0.199750] (-) TimerEvent: {}
+[0.300567] (-) TimerEvent: {}
+[0.401370] (-) TimerEvent: {}
+[0.502105] (-) TimerEvent: {}
+[0.602867] (-) TimerEvent: {}
+[0.703637] (-) TimerEvent: {}
+[0.804371] (-) TimerEvent: {}
+[0.905100] (-) TimerEvent: {}
+[1.005893] (-) TimerEvent: {}
+[1.106655] (-) TimerEvent: {}
+[1.207405] (-) TimerEvent: {}
+[1.308274] (-) TimerEvent: {}
+[1.409565] (-) TimerEvent: {}
+[1.510847] (-) TimerEvent: {}
+[1.611695] (-) TimerEvent: {}
+[1.712483] (-) TimerEvent: {}
+[1.813305] (-) TimerEvent: {}
+[1.914091] (-) TimerEvent: {}
+[2.014832] (-) TimerEvent: {}
+[2.115626] (-) TimerEvent: {}
+[2.216566] (-) TimerEvent: {}
+[2.317371] (-) TimerEvent: {}
+[2.418155] (-) TimerEvent: {}
+[2.519121] (-) TimerEvent: {}
+[2.566452] (mybot37) JobProgress: {'identifier': 'mybot37', 'progress': 'cmake'}
+[2.569763] (mybot37) JobProgress: {'identifier': 'mybot37', 'progress': 'build'}
+[2.573297] (mybot37) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ubuntu/autonomous_ROS/build/mybot37', '--', '-j4', '-l4'], 'cwd': '/home/ubuntu/autonomous_ROS/build/mybot37', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ubuntu'), ('SSH_CLIENT', '192.168.219.102 48240 22'), ('LC_TIME', 'C.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/ubuntu/.vscode-server/cli/servers/Stable-cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/ubuntu/.vscode-server/cli/servers/Stable-cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/ubuntu'), ('OLDPWD', '/home/ubuntu'), ('TERM_PROGRAM_VERSION', '1.96.4'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-79f8a6a5-b91b-4a73-8a90-839e09ed1e4e.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/ubuntu/.vscode-server/cli/servers/Stable-cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/server/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'C.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/home/ubuntu/.vscode-server/cli/servers/Stable-cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'ubuntu'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/ubuntu/.vscode-server/cli/servers/Stable-cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'C.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('LANG', 'C.UTF-8'), ('LC_TELEPHONE', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-44ba984aac.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'C.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'C.UTF-8'), ('LC_IDENTIFICATION', 'C.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/ubuntu/autonomous_ROS/build/mybot37'), ('SSH_CONNECTION', '192.168.219.102 48240 192.168.219.100 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'C.UTF-8'), ('LC_PAPER', 'C.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[2.620011] (-) TimerEvent: {}
+[2.722048] (-) TimerEvent: {}
+[2.823568] (-) TimerEvent: {}
+[2.892028] (mybot37) StderrLine: {'line': b'\x1b[0mCMake Error: The current CMakeCache.txt directory /home/ubuntu/autonomous_ROS/build/mybot37/CMakeCache.txt is different than the directory /home/jakhon37/myspace/robotics/autonomous_ROS/build/mybot37 where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt\x1b[0m\n'}
+[2.923796] (-) TimerEvent: {}
+[2.991817] (mybot37) StderrLine: {'line': b'\x1b[0mCMake Error: The source directory "/home/jakhon37/myspace/robotics/autonomous_ROS/src/mybot37" does not exist.\n'}
+[2.993081] (mybot37) StderrLine: {'line': b'Specify --help for usage, or press the help button on the CMake GUI.\x1b[0m\n'}
+[3.024011] (-) TimerEvent: {}
+[3.026774] (mybot37) StderrLine: {'line': b'gmake: *** [Makefile:226: cmake_check_build_system] Error 1\n'}
+[3.036637] (mybot37) CommandEnded: {'returncode': 2}
+[3.124217] (-) TimerEvent: {}
+[3.139468] (mybot37) JobEnded: {'identifier': 'mybot37', 'rc': 2}
+[3.224433] (-) TimerEvent: {}
+[3.325710] (-) TimerEvent: {}
+[3.426485] (-) TimerEvent: {}
+[3.527728] (-) TimerEvent: {}
+[3.630256] (-) TimerEvent: {}
+[3.732363] (-) TimerEvent: {}
+[3.833809] (-) TimerEvent: {}
+[3.935052] (-) TimerEvent: {}
+[4.036771] (-) TimerEvent: {}
+[4.137652] (-) TimerEvent: {}
+[4.238492] (-) TimerEvent: {}
+[4.339393] (-) TimerEvent: {}
+[4.440821] (-) TimerEvent: {}
+[4.542217] (-) TimerEvent: {}
+[4.643221] (-) TimerEvent: {}
+[4.744169] (-) TimerEvent: {}
+[4.845270] (-) TimerEvent: {}
+[4.946266] (-) TimerEvent: {}
+[5.047420] (-) TimerEvent: {}
+[5.149006] (-) TimerEvent: {}
+[5.238050] (mpu6050_imu) JobEnded: {'identifier': 'mpu6050_imu', 'rc': 'SIGINT'}
+[5.242476] (motor_control) JobEnded: {'identifier': 'motor_control', 'rc': 'SIGINT'}
+[5.249113] (-) TimerEvent: {}
+[5.254194] (-) EventReactorShutdown: {}

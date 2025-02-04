@@ -1,0 +1,87 @@
+[0.000000] (-) TimerEvent: {}
+[0.001867] (-) JobUnselected: {'identifier': 'motor_control'}
+[0.002558] (-) JobUnselected: {'identifier': 'mybot37'}
+[0.003073] (mpu6050_imu) JobQueued: {'identifier': 'mpu6050_imu', 'dependencies': OrderedDict()}
+[0.003287] (mpu6050_imu) JobStarted: {'identifier': 'mpu6050_imu'}
+[0.098954] (-) TimerEvent: {}
+[0.199855] (-) TimerEvent: {}
+[0.300661] (-) TimerEvent: {}
+[0.401416] (-) TimerEvent: {}
+[0.502292] (-) TimerEvent: {}
+[0.602985] (-) TimerEvent: {}
+[0.703704] (-) TimerEvent: {}
+[0.804887] (-) TimerEvent: {}
+[0.905591] (-) TimerEvent: {}
+[1.006341] (-) TimerEvent: {}
+[1.107104] (-) TimerEvent: {}
+[1.207959] (-) TimerEvent: {}
+[1.309194] (-) TimerEvent: {}
+[1.409966] (-) TimerEvent: {}
+[1.510758] (-) TimerEvent: {}
+[1.611531] (-) TimerEvent: {}
+[1.712404] (-) TimerEvent: {}
+[1.813179] (-) TimerEvent: {}
+[1.913932] (-) TimerEvent: {}
+[2.014674] (-) TimerEvent: {}
+[2.115406] (-) TimerEvent: {}
+[2.216212] (-) TimerEvent: {}
+[2.316906] (-) TimerEvent: {}
+[2.417694] (-) TimerEvent: {}
+[2.518660] (-) TimerEvent: {}
+[2.619497] (-) TimerEvent: {}
+[2.720187] (-) TimerEvent: {}
+[2.821075] (-) TimerEvent: {}
+[2.922218] (-) TimerEvent: {}
+[2.951063] (mpu6050_imu) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/mpu6050_imu', 'build', '--build-base', '/home/ubuntu/autonomous_ROS/build/mpu6050_imu/build', 'install', '--record', '/home/ubuntu/autonomous_ROS/build/mpu6050_imu/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/ubuntu/autonomous_ROS/src/mpu6050_imu', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ubuntu', 'SSH_CLIENT': '192.168.219.102 48240 22', 'LC_TIME': 'C.UTF-8', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/ubuntu/.vscode-server/cli/servers/Stable-cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/server/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/ubuntu/.vscode-server/cli/servers/Stable-cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/ubuntu', 'OLDPWD': '/home/ubuntu', 'TERM_PROGRAM_VERSION': '1.96.4', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-79f8a6a5-b91b-4a73-8a90-839e09ed1e4e.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/ubuntu/.vscode-server/cli/servers/Stable-cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/server/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'C.UTF-8', 'VSCODE_GIT_ASKPASS_NODE': '/home/ubuntu/.vscode-server/cli/servers/Stable-cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'ROS_DISTRO': 'humble', 'LOGNAME': 'ubuntu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '1', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/ubuntu/.vscode-server/cli/servers/Stable-cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba/server/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'LC_ADDRESS': 'C.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'C.UTF-8', 'LC_TELEPHONE': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-44ba984aac.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'C.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'C.UTF-8', 'LC_IDENTIFICATION': 'C.UTF-8', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/ubuntu/autonomous_ROS/build/mpu6050_imu', 'SSH_CONNECTION': '192.168.219.102 48240 192.168.219.100 22', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ubuntu/autonomous_ROS/build/mpu6050_imu/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/autonomous_ROS/install/mpu6050_imu/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'C.UTF-8', 'LC_PAPER': 'C.UTF-8', 'COLCON': '1'}, 'shell': False}
+[3.022384] (-) TimerEvent: {}
+[3.123100] (-) TimerEvent: {}
+[3.223967] (-) TimerEvent: {}
+[3.324743] (-) TimerEvent: {}
+[3.425495] (-) TimerEvent: {}
+[3.526237] (-) TimerEvent: {}
+[3.626945] (-) TimerEvent: {}
+[3.727610] (-) TimerEvent: {}
+[3.828297] (-) TimerEvent: {}
+[3.929103] (-) TimerEvent: {}
+[4.029888] (-) TimerEvent: {}
+[4.065187] (mpu6050_imu) StdoutLine: {'line': b'running egg_info\n'}
+[4.067848] (mpu6050_imu) StdoutLine: {'line': b'creating ../../build/mpu6050_imu/mpu6050_imu.egg-info\n'}
+[4.068617] (mpu6050_imu) StdoutLine: {'line': b'writing ../../build/mpu6050_imu/mpu6050_imu.egg-info/PKG-INFO\n'}
+[4.069867] (mpu6050_imu) StdoutLine: {'line': b'writing dependency_links to ../../build/mpu6050_imu/mpu6050_imu.egg-info/dependency_links.txt\n'}
+[4.070603] (mpu6050_imu) StdoutLine: {'line': b'writing entry points to ../../build/mpu6050_imu/mpu6050_imu.egg-info/entry_points.txt\n'}
+[4.071221] (mpu6050_imu) StdoutLine: {'line': b'writing requirements to ../../build/mpu6050_imu/mpu6050_imu.egg-info/requires.txt\n'}
+[4.071810] (mpu6050_imu) StdoutLine: {'line': b'writing top-level names to ../../build/mpu6050_imu/mpu6050_imu.egg-info/top_level.txt\n'}
+[4.072745] (mpu6050_imu) StdoutLine: {'line': b"writing manifest file '../../build/mpu6050_imu/mpu6050_imu.egg-info/SOURCES.txt'\n"}
+[4.080902] (mpu6050_imu) StdoutLine: {'line': b"reading manifest file '../../build/mpu6050_imu/mpu6050_imu.egg-info/SOURCES.txt'\n"}
+[4.084522] (mpu6050_imu) StdoutLine: {'line': b"writing manifest file '../../build/mpu6050_imu/mpu6050_imu.egg-info/SOURCES.txt'\n"}
+[4.085269] (mpu6050_imu) StdoutLine: {'line': b'running build\n'}
+[4.085888] (mpu6050_imu) StdoutLine: {'line': b'running build_py\n'}
+[4.086592] (mpu6050_imu) StdoutLine: {'line': b'creating /home/ubuntu/autonomous_ROS/build/mpu6050_imu/build\n'}
+[4.087231] (mpu6050_imu) StdoutLine: {'line': b'creating /home/ubuntu/autonomous_ROS/build/mpu6050_imu/build/lib\n'}
+[4.087676] (mpu6050_imu) StdoutLine: {'line': b'creating /home/ubuntu/autonomous_ROS/build/mpu6050_imu/build/lib/mpu6050_imu\n'}
+[4.088196] (mpu6050_imu) StdoutLine: {'line': b'copying mpu6050_imu/__init__.py -> /home/ubuntu/autonomous_ROS/build/mpu6050_imu/build/lib/mpu6050_imu\n'}
+[4.088629] (mpu6050_imu) StdoutLine: {'line': b'copying mpu6050_imu/mpu6050_node.py -> /home/ubuntu/autonomous_ROS/build/mpu6050_imu/build/lib/mpu6050_imu\n'}
+[4.089241] (mpu6050_imu) StdoutLine: {'line': b'running install\n'}
+[4.090590] (mpu6050_imu) StdoutLine: {'line': b'running install_lib\n'}
+[4.093787] (mpu6050_imu) StdoutLine: {'line': b'creating /home/ubuntu/autonomous_ROS/install/mpu6050_imu/lib/python3.10/site-packages/mpu6050_imu\n'}
+[4.094470] (mpu6050_imu) StdoutLine: {'line': b'copying /home/ubuntu/autonomous_ROS/build/mpu6050_imu/build/lib/mpu6050_imu/__init__.py -> /home/ubuntu/autonomous_ROS/install/mpu6050_imu/lib/python3.10/site-packages/mpu6050_imu\n'}
+[4.095146] (mpu6050_imu) StdoutLine: {'line': b'copying /home/ubuntu/autonomous_ROS/build/mpu6050_imu/build/lib/mpu6050_imu/mpu6050_node.py -> /home/ubuntu/autonomous_ROS/install/mpu6050_imu/lib/python3.10/site-packages/mpu6050_imu\n'}
+[4.097898] (mpu6050_imu) StdoutLine: {'line': b'byte-compiling /home/ubuntu/autonomous_ROS/install/mpu6050_imu/lib/python3.10/site-packages/mpu6050_imu/__init__.py to __init__.cpython-310.pyc\n'}
+[4.099377] (mpu6050_imu) StdoutLine: {'line': b'byte-compiling /home/ubuntu/autonomous_ROS/install/mpu6050_imu/lib/python3.10/site-packages/mpu6050_imu/mpu6050_node.py to mpu6050_node.cpython-310.pyc\n'}
+[4.103062] (mpu6050_imu) StdoutLine: {'line': b'running install_data\n'}
+[4.103792] (mpu6050_imu) StdoutLine: {'line': b'creating /home/ubuntu/autonomous_ROS/install/mpu6050_imu/share/ament_index\n'}
+[4.104473] (mpu6050_imu) StdoutLine: {'line': b'creating /home/ubuntu/autonomous_ROS/install/mpu6050_imu/share/ament_index/resource_index\n'}
+[4.105019] (mpu6050_imu) StdoutLine: {'line': b'creating /home/ubuntu/autonomous_ROS/install/mpu6050_imu/share/ament_index/resource_index/packages\n'}
+[4.105547] (mpu6050_imu) StdoutLine: {'line': b'copying resource/mpu6050_imu -> /home/ubuntu/autonomous_ROS/install/mpu6050_imu/share/ament_index/resource_index/packages\n'}
+[4.106174] (mpu6050_imu) StdoutLine: {'line': b'copying package.xml -> /home/ubuntu/autonomous_ROS/install/mpu6050_imu/share/mpu6050_imu\n'}
+[4.106634] (mpu6050_imu) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.114265] (mpu6050_imu) StdoutLine: {'line': b'Copying ../../build/mpu6050_imu/mpu6050_imu.egg-info to /home/ubuntu/autonomous_ROS/install/mpu6050_imu/lib/python3.10/site-packages/mpu6050_imu-0.0.0-py3.10.egg-info\n'}
+[4.120170] (mpu6050_imu) StdoutLine: {'line': b'running install_scripts\n'}
+[4.130034] (-) TimerEvent: {}
+[4.207698] (mpu6050_imu) StdoutLine: {'line': b'Installing mpu6050_node script to /home/ubuntu/autonomous_ROS/install/mpu6050_imu/lib/mpu6050_imu\n'}
+[4.209481] (mpu6050_imu) StdoutLine: {'line': b"writing list of installed files to '/home/ubuntu/autonomous_ROS/build/mpu6050_imu/install.log'\n"}
+[4.230293] (-) TimerEvent: {}
+[4.329574] (mpu6050_imu) CommandEnded: {'returncode': 0}
+[4.331248] (-) TimerEvent: {}
+[4.384656] (mpu6050_imu) JobEnded: {'identifier': 'mpu6050_imu', 'rc': 0}
+[4.388033] (-) EventReactorShutdown: {}
