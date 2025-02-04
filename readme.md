@@ -10,7 +10,8 @@ The project provides a solution for controlling a ROS2-based robot, an autonomou
   - **Lidar:** Integrates a RPLIDAR (or compatible) sensor and publishes LaserScan messages.
 
 --- 
-
+![Project Structure](assets/rcproject.png)
+---
 ## TO DO
 - 💭 **SLAM** to careate enviorenment map and localize the car
 - 💭 **Navigation** to autonomously drive and find a best path to reach the target point 
@@ -23,7 +24,7 @@ The project provides a solution for controlling a ROS2-based robot, an autonomou
 
 ## Table of Contents
 
-- [Features](#features)
+- [Features](#features)c
 - [Prerequisites](#)
 - [Project Setup and Node Creation](#project-setup-and-node-creation)
   - [ROS2 Workspace Setup](#ros2-workspace-setup)
